@@ -1,7 +1,6 @@
 name: abyss
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -31,8 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+
   cupertino_icons: ^1.0.8
   go_router: ^15.0.0
   animated_text_kit: ^4.2.3
@@ -62,20 +60,25 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/logo/logo.svg
-  #   - images/a_dot_ham.jpeg
+    - assets\images\logo\logo.svg
+    - assets\images\icons\arrow_back_ios.svg
+    - assets\images\icons\block.svg
+    - assets\images\icons\check.svg
+    - assets\images\icons\close.svg
+    - assets\images\icons\done_all.svg
+    - assets\images\icons\done.svg
+    - assets\images\icons\group_add.svg
+    - assets\images\icons\group.svg
+    - assets\images\icons\keyboard_arrow_right.svg
+    - assets\images\icons\lock_open.svg
+    - assets\images\icons\lock.svg
+    - assets\images\icons\more_vert.svg
+    - assets\images\icons\notifications.svg
+    - assets\images\icons\people.svg
+    - assets\images\icons\person_add.svg
+    - assets\images\icons\person.svg
+    - assets\images\icons\search.svg
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
   fonts:
     - family: Manrope
       fonts:

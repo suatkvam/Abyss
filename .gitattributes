@@ -1,0 +1,7 @@
+# Tüm metin dosyaları için LF kullan
+* text=auto eol=lf
+
+# Belirli dosya türleri için satır sonu dönüşümünü kapat
+*.png binary
+*.jpg binary
+*.svg text eol=lf
