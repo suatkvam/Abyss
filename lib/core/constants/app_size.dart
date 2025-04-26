@@ -36,6 +36,9 @@ class AppSizes {
   static const double logoWidth = 100.0;
   static const double logoRadius = 50.0;
 
+  static const double logoBackgroundHeight = 200.0;
+  static const double logoBackgroundWidth = 2000.0;
+
   // profile picture sizes
   static const double profilePictureSize = 80.0;
 
