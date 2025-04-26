@@ -39,14 +39,14 @@ class AppSizes {
   // profile picture sizes
   static const double profilePictureSize = 80.0;
 
-  static const double iconSmallSize = 16.0;
-  static const double iconMediumSize = 24.0;
-  static const double iconLargeSize = 32.0;
+  static const double iconSIzeSmall = 16.0;
+  static const double iconSizeMedium = 24.0;
+  static const double iconSizeLarge = 32.0;
 
-  static const double smallRadius = 4.0;
-  static const double mediumRadius = 8.0;
-  static const double largeRadius = 16.0;
-  static const double extraLargeRadius = 20.0;
+  static const double radiusSmall = 4.0;
+  static const double radiusMedium = 8.0;
+  static const double radiusLarge = 16.0;
+  static const double radiusExtraLarge = 20.0;
 
   // General spacing values for padding, margin, and gaps
   static const double spacingExtraSmall = 4.0;

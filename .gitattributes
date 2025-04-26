@@ -1,6 +1,5 @@
 # Tüm metin dosyaları için LF kullan
-* text=auto eol=lf
-
+* text=auto 
 # Belirli dosya türleri için satır sonu dönüşümünü kapat
 *.png binary
 *.jpg binary
