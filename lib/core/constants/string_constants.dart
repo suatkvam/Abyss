@@ -61,7 +61,7 @@ class StringConstants {
   static const String groupName = 'Group Name';
   static const String loadingMessage = 'Loading...';
 
-  List<String> get settings => [
+  static List<String> get settings => [
     'Account information',
     'Privacy and security',
     'Notifications',
