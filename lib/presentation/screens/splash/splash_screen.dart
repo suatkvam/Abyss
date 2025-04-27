@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:abyss/core/constants/index.dart';
 import 'package:flutter_svg/svg.dart';
-// import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -31,20 +31,6 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 75),
-              // AnimatedTextKit(
-              //   animatedTexts: [
-              //     FadeAnimatedText(
-              //       'ABYSS',
-              //       textStyle: TypographyConstants.heading1.copyWith(
-              //         color: DarkColorConstants.textWhitePrimary,
-              //       ),
-              //       duration: const Duration(milliseconds: 2000),
-              //     ),
-              //   ],
-              //   totalRepeatCount: 1,
-              //   pause: const Duration(milliseconds: 500),
-              //   // onFinished: () => context.go('/login'),
-              // ),
               AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
@@ -57,7 +43,7 @@ class SplashScreen extends StatelessWidget {
                 ],
                 totalRepeatCount: 1,
                 pause: const Duration(milliseconds: 500),
-                // onFinished: () => context.go('/login'),
+                onFinished: () => context.go('/login'),
               ),
             ],
           ),
