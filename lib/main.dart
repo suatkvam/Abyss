@@ -1,3 +1,4 @@
+import 'package:abyss/core/theme/app_theme.dart';
 import 'package:abyss/presentation/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: AppTheme.darkTheme,
       title: 'ABYSS',
       routerConfig: router,
     );

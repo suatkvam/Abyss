@@ -31,6 +31,7 @@ class DarkColorConstants {
 
   // message input field colors
   static const Color inputFieldBackgroundColor = Color(0xFF111A27);
+
   static const messageInputGradient1 = LinearGradient(
     begin: Alignment.topCenter, // start point (top)
     end: Alignment.bottomCenter, // end point (bottom)
@@ -81,40 +82,74 @@ class DarkColorConstants {
 ///////////////////////////////
 class LightColorConstants {
   // Light mode theme colors
-  static const Color lightBackgroundColor = Color(0xFFF5F7FA);
-  static const Color lightLogoBackgroundColor = Color(0xFFE6E8EC);
+  static const Color lightBackgroundColor = Color(
+    0xFFEEE5D8,
+  ); // Invert of darkBackgroundColor
+  static const Color lightLogoBackgroundColor = Color(
+    0xFFAD927D,
+  ); // Invert of darkLogoBackgroundColor
 
-  // primary button color
-  static const Color lightPrimaryButtonColor = Color(0xFF6B8299);
-  static const Color lightPrimaryButtonPressedColor = Color(0xFF2A6A93);
-  static const Color lightPrimaryButtonDisabledColor = Color(0xFFE6F3FF);
+  // Primary button color
+  static const Color lightPrimaryButtonColor = Color(
+    0xFF624D40,
+  ); // Invert of darkPrimaryButtonColor
+  static const Color lightPrimaryButtonPressedColor = Color(
+    0xFFC26F3B,
+  ); // Invert of darkPrimaryButtonPressedColor
+  static const Color lightPrimaryButtonDisabledColor = Color(
+    0xFF331000,
+  ); // Invert of darkPrimaryButtonDiasbledColor
 
-  // secondary button color
-  static const Color lightSecondaryButtonColor = Color(0xFF00BBFF);
-  static const Color lightSecondaryButtonPressedColor = Color(0xFF0090CC);
-  static const Color lightSecondaryButtonDisabledColor = Color(0xFFCCEFFF);
-  static const Color roundButtonColor = Color(0xFF6B8299);
+  // Secondary button color
+  static const Color lightSecondaryButtonColor = Color(
+    0xFFFF4400,
+  ); // Invert of darkSecondaryButtonColor
+  static const Color lightSecondaryButtonPressedColor = Color(
+    0xFFFF6F33,
+  ); // Invert of darkSecondaryButtonPressedColor
+  static const Color lightSecondaryButtonDisabledColor = Color(
+    0xFF331000,
+  ); // Invert of darkSecondaryButtonDisabledColor
+  static const Color roundButtonColor = Color(
+    0xFF624D40,
+  ); // Invert of roundButtonColor
 
-  // text colors (kept same as dark theme as per request)
-  static const Color textBlackPrimary = Color(0xFF232323);
-  static const Color disabledTextColor = Color(0xFF9DB2BF);
-  static const Color textWhitePrimary = Color(0xFFDDE6ED);
-  static const Color textWhiteSecondary = Color(0xFFFFFFFF);
-  static const Color linkTextColor = Color(0xFF0793FF);
-  static const Color unreadMessageIndicatorColor = Color(0xFF44D4F3);
-  static const Color successColor = Color(0xFF00BBFF);
-  static const Color errorColor = Color(0xFFCD1A1A);
-  static const Color readIconColor = Color(0xFF00BBFF);
+  // Text colors
+  static const Color textBlackPrimary = Color(
+    0xFF232323,
+  ); // Koyu metin, light theme'de değişmedi (okunabilirlik için)
+  static const Color disabledTextColor = Color(
+    0xFF624D40,
+  ); // Invert of disabledTextColor
+  static const Color textWhitePrimary = Color(
+    0xFF221912,
+  ); // Invert of textWhitePrimary
+  static const Color textWhiteSecondary = Color(
+    0xFF000000,
+  ); // Invert of textWhiteSecondary
+  static const Color linkTextColor = Color(
+    0xFFF86C00,
+  ); // Invert of linkTextColor
+  static const Color unreadMessageIndicatorColor = Color(
+    0xFFBB2B0C,
+  ); // Invert of unreadMessageIndicatorColor
+  static const Color successColor = Color(0xFFFF4400); // Invert of sucsessColor
+  static const Color errorColor = Color(0xFF32E5E5); // Invert of errorColor
+  static const Color readIconColor = Color(
+    0xFFFF4400,
+  ); // Invert of readIconColor
 
-  // message input field colors
-  static const Color inputFieldBackgroundColor = Color(0xFFEFF2F7);
+  // Message input field colors
+  static const Color inputFieldBackgroundColor = Color(
+    0xFFEEE5D8,
+  ); // Invert of inputFieldBackgroundColor
   static const messageInputGradient1 = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFFECEEF3), // %11
-      Color(0xFFE6E9F0), // %60
-      Color(0xFFDEE2EB), // %92
+      Color(0xFFE5DFD3), // Invert of 0xFF1A202C
+      Color(0xFFDBD3C4), // Invert of 0xFF242C3B
+      Color(0xFFD2C8B7), // Invert of 0xFF2D3748
     ],
     stops: [0.11, 0.60, 0.92],
   );
@@ -122,46 +157,78 @@ class LightColorConstants {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFFE8EAEF), // %80
-      Color(0xFFDEE2EB), // %100
+      Color(0xFFDCD5D9), // Invert of 0xFF232426
+      Color(0xFFD2C8B7), // Invert of 0xFF2D3748
     ],
     stops: [0.80, 1.0],
   );
 
-  // placeholder colors
-  static const Color placeholderColor = Color(0xFF94A3B8);
+  // Placeholder colors
+  static const Color placeholderColor = Color(
+    0xFF342A1E,
+  ); // Invert of placeholderColor
 
-  // toggle switch colors
-  static Color toggleSwitchTrackOnColor = Color(0xFF4CAF50);
-  static Color toggleSwitchThumbOnColor = Color(0xFF165951);
-  static Color toggleSwitchTrackOffColor = Color.fromRGBO(203, 213, 225, 0.8);
-  static Color toggleSwitchThumbOffColor = Color.fromRGBO(148, 163, 184, 0.9);
-  static Color toggleSwitchTrackDisabledColor = Color.fromRGBO(
-    203,
+  // Toggle switch colors
+  static Color toggleSwitchTrackOnColor = Color(
+    0xFFB350AF,
+  ); // Invert of toggleSwitchTrackOnColor
+  static Color toggleSwitchThumbOnColor = Color(
+    0xFFE9A6AE,
+  ); // Invert of toggleSwitchThumbOnColor
+  static Color toggleSwitchTrackOffColor = Color.fromRGBO(
     213,
-    225,
+    208,
+    197,
+    0.8,
+  ); // Invert of toggleSwitchTrackOffColor
+  static Color toggleSwitchThumbOffColor = Color.fromRGBO(
+    187,
+    179,
+    169,
+    0.9,
+  ); // Invert of toggleSwitchThumbOffColor
+  static Color toggleSwitchTrackDisabledColor = Color.fromRGBO(
+    213,
+    208,
+    197,
     0.4,
-  );
+  ); // Invert of toggleSwitchTrackDisabledColor
   static Color toggleSwitchThumbDisabledColor = Color.fromRGBO(
-    148,
-    163,
-    184,
+    187,
+    179,
+    169,
     0.4,
-  );
+  ); // Invert of toggleSwitchThumbDisabledColor
 
-  // toggle switch shadow effect color
+  // Toggle switch shadow effect color
   static List<BoxShadow> toggleThumbShadow = [
     BoxShadow(
-      color: Color.fromRGBO(73, 192, 186, 0.83),
+      color: Color.fromRGBO(
+        182,
+        63,
+        69,
+        0.83,
+      ), // Invert of Color.fromRGBO(73, 192, 186, 0.83)
       offset: Offset(0, 0),
       blurRadius: 4,
       spreadRadius: 0,
     ),
   ];
 
-  // separator colors
-  static Color separatorDefaultColor = Color(0xFF6B8299);
-  static Color separatorFocusedColor = Color(0xFF00BBFF);
-  static Color separatorErrorColor = Color(0xFFCD1A1A);
-  static Color separatorDisabledColor = Color.fromRGBO(148, 163, 184, 0.5);
+  // Separator colors
+  static Color separatorDefaultColor = Color(
+    0xFF624D40,
+  ); // Invert of separatorDefaultColor
+  static Color separatorFocusedColor = Color(
+    0xFFFF4400,
+  ); // Invert of separatorFocusedColor
+  static Color separatorErrorColor = Color(
+    0xFF32E5E5,
+  ); // Invert of separatorErrorColor
+  static Color separatorDisabledColor = Color.fromRGBO(
+    29,
+    23,
+    15,
+    0.5,
+  ); // Invert of separatorDisabledColor
 }
