@@ -8,7 +8,7 @@ class DarkColorConstants {
   // primary button color
   static const Color darkPrimaryButtonColor = Color(0xFF9DB2BF);
   static const Color darkPrimaryButtonPressedColor = Color(0xFF3D90C4);
-  static const Color darkPrimaryButtonDiasbledColor = Color(0xFFCCEFFF);
+  static const Color darkPrimaryButtonDisabledColor = Color(0xFFCCEFFF);
 
   // secondary button color
   static const Color darkSecondaryButtonColor = Color(0xFF00BBFF);

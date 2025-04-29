@@ -71,7 +71,7 @@ class AppTheme {
           foregroundColor: DarkColorConstants.darkPrimaryButtonPressedColor,
           backgroundColor: DarkColorConstants.darkPrimaryButtonColor,
           disabledBackgroundColor:
-              DarkColorConstants.darkPrimaryButtonDiasbledColor,
+              DarkColorConstants.darkPrimaryButtonDisabledColor,
           disabledForegroundColor: DarkColorConstants.disabledTextColor,
           textStyle: TypographyConstants.bodyText3.copyWith(
             color: DarkColorConstants.textWhiteSecondary,
