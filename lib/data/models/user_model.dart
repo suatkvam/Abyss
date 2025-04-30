@@ -8,6 +8,8 @@ class UserModel {
   final String profileImageUrl;
   final bool isOnline;
   final DateTime lastSeen;
+  final String
+  password; // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
 
   UserModel({
     required this.id,
@@ -19,6 +21,7 @@ class UserModel {
     required this.profileImageUrl,
     required this.isOnline,
     required this.lastSeen,
+    required this.password,
   });
 
   // Getter to return username with discriminator (e.g., "alice_s#1234")
@@ -35,6 +38,8 @@ class UserModel {
       'profileImageUrl': profileImageUrl,
       'isOnline': isOnline,
       'lastSeen': lastSeen.toIso8601String(),
+      'password':
+          password, // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
     };
   }
 
@@ -49,6 +54,9 @@ class UserModel {
       profileImageUrl: json['profileImageUrl'] as String,
       isOnline: json['isOnline'] as bool,
       lastSeen: DateTime.parse(json['lastSeen'] as String),
+      password:
+          json['password']
+              as String, // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
     );
   }
 }

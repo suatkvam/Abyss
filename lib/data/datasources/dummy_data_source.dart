@@ -28,6 +28,8 @@ class DummyDataSource {
         profileImageUrl: "https://example.com/profiles/alice.jpg",
         isOnline: true,
         lastSeen: DateTime.now().subtract(Duration(minutes: 5)),
+        password:
+            '1234', // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
       ),
       UserModel(
         id: "2",
@@ -39,6 +41,8 @@ class DummyDataSource {
         profileImageUrl: "https://example.com/profiles/bob.jpg",
         isOnline: false,
         lastSeen: DateTime.now().subtract(Duration(hours: 1)),
+        password:
+            '1234', // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
       ),
       UserModel(
         id: "3",
@@ -50,6 +54,8 @@ class DummyDataSource {
         profileImageUrl: "https://example.com/profiles/charlie.jpg",
         isOnline: true,
         lastSeen: DateTime.now().subtract(Duration(minutes: 10)),
+        password:
+            '1234', // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
       ),
       UserModel(
         id: "4",
@@ -61,6 +67,8 @@ class DummyDataSource {
         profileImageUrl: "https://example.com/profiles/you.jpg",
         isOnline: true,
         lastSeen: DateTime.now(),
+        password:
+            '1234', // !errror Şifre alanı eklendi bunu gercek veri tabanina gecerken kaldir
       ),
     ];
 
