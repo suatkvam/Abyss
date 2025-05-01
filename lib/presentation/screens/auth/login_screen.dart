@@ -2,6 +2,7 @@ import 'package:abyss/core/constants/index.dart';
 import 'package:abyss/logic/auth/auth_bloc.dart';
 import 'package:abyss/logic/auth/auth_event.dart';
 import 'package:abyss/logic/auth/auth_state.dart';
+import 'package:abyss/presentation/widgets/custom_alert_dialog.dart';
 import 'package:abyss/presentation/widgets/custom_elevated_button.dart';
 import 'package:abyss/presentation/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
@@ -38,9 +39,17 @@ class _LoginScreenState extends State<LoginScreen> {
         if (state is AuthSuccess) {
           context.go('/'); // yönlendirme buradan artık çalışacak
         } else if (state is AuthFailure) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(state.error)));
+          showDialog(
+            context: context,
+            builder:
+                (BuildContext context) => CustomAlertDialog(
+                  errorMessageTitle: StringConstants.errorMessage,
+                  errorMessage: '',
+                  buttonText1: 'ok',
+                  onButtonPressed1:
+                      () => Navigator.of(context).pop(), // kullanimi cozulecek
+                ),
+          );
         }
       },
       child: Scaffold(
@@ -70,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 75),
                     CustomTextField(
                       hintText:
-                          'Email or userName', // !error email or username constant gelicek
+                          'Email or user Name', // !error email or username constant gelicek
                       controller: emailOrUserNameController,
                       isEnabled: true,
                       obscureText: false,
@@ -111,12 +120,20 @@ class _LoginScreenState extends State<LoginScreen> {
                           );
                         } else {
                           // Hata mesajı göster
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                StringConstants.emptyPasswordError,
-                              ),
-                            ),
+                          showDialog(
+                            context: context,
+                            builder:
+                                (BuildContext context) => CustomAlertDialog(
+                                  errorMessageTitle:
+                                      StringConstants.errorMessage,
+                                  errorMessage: '',
+                                  buttonText1: 'ok',
+                                  onButtonPressed1:
+                                      () =>
+                                          Navigator.of(
+                                            context,
+                                          ).pop(), // kullanimi cozulecek
+                                ),
                           );
                         }
                       },

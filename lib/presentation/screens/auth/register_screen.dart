@@ -2,6 +2,7 @@ import 'package:abyss/core/constants/index.dart';
 import 'package:abyss/logic/auth/auth_bloc.dart';
 import 'package:abyss/logic/auth/auth_event.dart';
 import 'package:abyss/logic/auth/auth_state.dart';
+import 'package:abyss/presentation/widgets/custom_alert_dialog.dart';
 import 'package:abyss/presentation/widgets/custom_elevated_button.dart';
 import 'package:abyss/presentation/widgets/custom_text_button.dart';
 import 'package:abyss/presentation/widgets/custom_text_field.dart';
@@ -48,32 +49,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
           showDialog(
             context: context,
             builder:
-                (_) => AlertDialog(
-                  //!error bunu widget a costume seklinde aktar
-                  title: const Text(StringConstants.errorMessage),
-                  content: Text(state.error),
-                  actions: [
-                    CustomTextButton(
-                      text: 'text', // yazi eklenecek
-                      isDarkTheme: true,
-                      isEnabled: true,
-                      onPressed:
-                          () =>
-                              Navigator.of(
-                                context,
-                              ).pop(), // kullanimi cozulecek
-                    ),
-                    CustomTextButton(
-                      text: 'text', // yazi eklenecek
-                      isDarkTheme: true,
-                      isEnabled: true,
-                      onPressed:
-                          () =>
-                              Navigator.of(
-                                context,
-                              ).pop(), // kullanimi cozulecek
-                    ),
-                  ],
+                (BuildContext context) => CustomAlertDialog(
+                  errorMessageTitle: StringConstants.errorMessage,
+                  errorMessage: '',
+                  buttonText1: 'ok',
+                  onButtonPressed1:
+                      () => Navigator.of(context).pop(), // kullanimi cozulecek
                 ),
           );
         }
@@ -218,32 +199,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           showDialog(
                             context: context,
                             builder:
-                                (BuildContext context) => AlertDialog(
-                                  //!error bunu widget a costume seklinde aktar
-                                  title: const Text('data'),
-                                  content: const Text('description'),
-                                  actions: [
-                                    CustomTextButton(
-                                      text: 'text', // yazi eklenecek
-                                      isDarkTheme: true,
-                                      isEnabled: true,
-                                      onPressed:
-                                          () =>
-                                              Navigator.of(
-                                                context,
-                                              ).pop(), // kullanimi cozulecek
-                                    ),
-                                    CustomTextButton(
-                                      text: 'text', // yazi eklenecek
-                                      isDarkTheme: true,
-                                      isEnabled: true,
-                                      onPressed:
-                                          () =>
-                                              Navigator.of(
-                                                context,
-                                              ).pop(), // kullanimi cozulecek
-                                    ),
-                                  ],
+                                (BuildContext context) => CustomAlertDialog(
+                                  errorMessageTitle:
+                                      StringConstants.errorMessage,
+                                  errorMessage: '',
+                                  buttonText1: 'ok',
+                                  onButtonPressed1:
+                                      () =>
+                                          Navigator.of(
+                                            context,
+                                          ).pop(), // kullanimi cozulecek
                                 ),
                           );
                         }
