@@ -2,6 +2,7 @@
 class StringConstants {
   static const String fullName = "Full Name";
   static const String username = "Username";
+  static const String displayName = "DisplayName";
   static const String email = "Email";
   static const String password = "Password";
   static const String dontHaveAccount = "Don't have an account? Register";
@@ -17,29 +18,47 @@ class StringConstants {
   static const String verifyCodeResendSuccess =
       "Verification code resent successfully!";
 
+  static const String createYourAccount = 'Create Your Account';
+  static const String firstCreate = 'First Create Your Account';
+
+  static const String enterYourFullName = "Enter your full name";
+  static const String enterYourUserName = "Enter your userName";
+  static const String enterYourDisplayName = "Enter your Display Name";
   static const String enterYourEmail = "Enter your email address";
   static const String enterYourPassword = "Enter your password";
   static const String confirmPassword = "Confirm Password";
 
   // error messages
-  static const String errorMessage = 'An error occurred!';
-  static const String noInternetConnection = 'No internet connection!';
-  static const String serverError = 'Server error! Please try again later.';
-  static const String timeoutError = 'Request timed out! Please try again.';
-  static const String unknownError = 'Unknown error! Please try again.';
-  static const String verifyCodeResendError =
-      "Error resending verification code!";
-
-  // static const String noDataFound = 'No data found!';
+  static const String emptyFieldError = 'Email or password can not be empty!';
+  static const String emptyPasswordError = 'Password is not be empty!';
+  static const String emptyConfirmPasswordError =
+      'Confirm password can not be empty';
+  static const String passwordsDoNotMatch = 'Password does not match';
+  static const String emptyUsernameError = 'Username cannot be empty!';
   static const String invalidEmail = 'Invalid email address!';
   static const String invalidPassword = 'Invalid password!';
   static const String invalidUsername = 'Invalid username!';
   static const String invalidName = 'Invalid name!';
   static const String invalidSurname = 'Invalid surname!';
   static const String invalidVerifyCode = 'Invalid verification code!';
+  static const String usernameTaken = 'Username is already taken!';
+  static const String emailAlreadyRegistered = 'Email is already registered!';
+  static const String weakPassword =
+      'Password must be at least 8 characters long and include a mix of letters, numbers, and symbols.';
+  static const String invalidToken = 'Invalid or expired verification token!';
+  static const String networkError =
+      'Network error occurred. Please try again later.';
+  static const String accountLocked =
+      'Your account has been locked. Please contact support.';
+  static const String sessionExpired =
+      'Your session has expired. Please log in again.';
+  static const String createAccountError = 'Error creating account!';
+  static const String loginError = 'Error logging in!';
+  static const String verifyCodeResendError =
+      "Error resending verification code!";
 
-  static const createAccountError = 'Error creating account!';
-  static const loginError = 'Error logging in!';
+  static const String errorMessage =
+      'An error occurred!'; // <-- Added this line
 
   // success messages
   static const String successMessage = 'Registered successfully!';

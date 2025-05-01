@@ -18,14 +18,15 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController emailController = TextEditingController();
+  final TextEditingController emailOrUserNameController =
+      TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>(); // ✅ form key
 
   @override
   void dispose() {
-    emailController.dispose();
+    emailOrUserNameController.dispose();
     passwordController.dispose();
     super.dispose();
   }
@@ -68,29 +69,28 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     SizedBox(height: 75),
                     CustomTextField(
-                      controller: emailController,
-                      hintText: 'Email or userName',
+                      hintText:
+                          'Email or userName', // !error email or username constant gelicek
+                      controller: emailOrUserNameController,
                       isEnabled: true,
                       obscureText: false,
-                      keyboardType: TextInputType.emailAddress,
+                      keyboardType: TextInputType.text,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your email';
+                          return StringConstants.emptyFieldError;
                         }
                         return null;
                       },
                     ),
                     CustomTextField(
-                      controller: passwordController,
                       hintText: 'password',
+                      controller: passwordController,
                       isEnabled: true,
                       obscureText: true,
                       keyboardType: TextInputType.visiblePassword,
-                      key: _formKey,
-
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your password';
+                          return StringConstants.emptyPasswordError;
                         }
                         return null;
                       },
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: StringConstants.loginButton,
                       isDarkTheme: true,
                       onPressed: () {
-                        final email = emailController.text;
+                        final email = emailOrUserNameController.text;
                         final password = passwordController.text;
 
                         // if (email.isNotEmpty && password.isNotEmpty) {
@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Email and Password cannot be empty',
+                                StringConstants.emptyPasswordError,
                               ),
                             ),
                           );
@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: StringConstants.dontHaveAccount,
                       isDarkTheme: true,
                       isEnabled: true,
-                      onPressed: () => context.go('/'),
+                      onPressed: () => context.go('/register'),
                     ),
                   ],
                 ),
