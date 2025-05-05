@@ -27,6 +27,7 @@ class StringConstants {
   static const String enterYourEmail = "Enter your email address";
   static const String enterYourPassword = "Enter your password";
   static const String confirmPassword = "Confirm Password";
+  
 
   // error messages
   static const String emptyFieldError = 'Email or password can not be empty!';

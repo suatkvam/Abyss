@@ -43,8 +43,9 @@ class _LoginScreenState extends State<LoginScreen> {
             context: context,
             builder:
                 (BuildContext context) => CustomAlertDialog(
+                  // !error hata mesajlari guncellenecek
                   errorMessageTitle: StringConstants.errorMessage,
-                  errorMessage: '',
+                  errorMessage: StringConstants.errorMessage,
                   buttonText1: 'ok',
                   onButtonPressed1:
                       () => Navigator.of(context).pop(), // kullanimi cozulecek

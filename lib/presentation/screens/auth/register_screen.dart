@@ -44,14 +44,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthSuccess) {
-          context.go('/');
+          context.go('/verify');
         } else if (state is AuthFailure) {
           showDialog(
             context: context,
             builder:
                 (BuildContext context) => CustomAlertDialog(
+                  // !error hata mesajlari guncellenecek
                   errorMessageTitle: StringConstants.errorMessage,
-                  errorMessage: '',
+                  errorMessage: StringConstants.errorMessage,
                   buttonText1: 'ok',
                   onButtonPressed1:
                       () => Navigator.of(context).pop(), // kullanimi cozulecek
@@ -166,12 +167,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return StringConstants
-                              .emptyConfirmPasswordError; // ✅ sabit hata mesajı
-                        }
-                        if (value != passwordController.text) {
-                          return StringConstants
-                              .passwordsDoNotMatch; // ✅ şifre doğrulama
+                          return StringConstants.emptyPasswordError;
+                        } else if (value != passwordController.text) {
+                          return StringConstants.passwordsDoNotMatch;
                         }
                         return null;
                       },
@@ -219,7 +217,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       text: StringConstants.alreadyHaveAccount,
                       isDarkTheme: true,
                       isEnabled: true,
-                      onPressed: () => context.go('/'),
+                      onPressed: () => context.go('/register'),
                     ),
                   ],
                 ),

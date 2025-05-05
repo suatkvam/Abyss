@@ -1,3 +1,4 @@
+import 'package:abyss/presentation/screens/auth/verfy_email_screen.dart';
 import 'package:abyss/presentation/screens/splash/index.dart';
 import 'package:abyss/presentation/screens/auth/index.dart';
 import 'package:abyss/presentation/screens/home/index.dart';
@@ -12,6 +13,7 @@ final GoRouter router = GoRouter(
       path: '/register',
       builder: (context, state) => const RegisterScreen(),
     ),
+    GoRoute(path: '/verify',builder: (context, state) => VerifyEmailScreen(),),
     GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
   ],
 );

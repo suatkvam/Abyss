@@ -1,4 +1,5 @@
 // main.dart
+import 'package:abyss/core/services/fake_auth_service.dart';
 import 'package:abyss/core/theme/app_theme.dart';
 import 'package:abyss/data/datasources/dummy_data_source.dart';
 import 'package:abyss/data/repositories/chat_repository.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider<AuthBloc>(
-            create: (context) => AuthBloc(context.read<ChatRepository>()),
+            // create: (context) => AuthBloc(context.read<ChatRepository>()),
+            create: (context) => AuthBloc(FakeAuthService()),
           ),
         ],
         child: MaterialApp.router(
